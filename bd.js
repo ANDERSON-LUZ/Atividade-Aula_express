@@ -2,24 +2,30 @@ class BancoDeDados {
     constructor() {
         this.alunos = [];
         this.professores = [];
-    }
+    };
 
-    get() {
+    getAlunos() {
         return this.alunos;
     }
 
-    add(aluno) {
-        this.alunos.push(aluno);
-        this.add = ['Anderson'];
+    getAlunoPorId (id) {
+
     }
 
-    get() {
+    addAluno(aluno) {
+        this.alunos.push(aluno);
+    }
+
+    getProfessores() {
         return this.professores;
     }
 
-    add(professor) {
+    getprofessorPorId (id) {
+
+    }
+
+    addProfessores(professor) {
         this.professores.push(professor);
-        this.add = ['Jesiel'];
     }
 }
 
