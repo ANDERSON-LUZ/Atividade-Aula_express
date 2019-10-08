@@ -11,20 +11,31 @@ app.get('/', (req, res) => {
 });
 
 app.get('/alunos', (req, res) => {
-    res.json(bd.get());
+    res.json(bd.getAlunos());
+});
+
+
+app.get('/alunos/:id', (req, res) => {
+    const idAluno = req.params.id;
+    res.json(bd.getAlunoPorId(idAluno));
 });
 
 app.post('/alunos', (req, res) => {
-    bd.add(req.body);
+    bd.addAluno(req.body);
     res.send('Aluno adicionado com sucesso!');
 });
 
 app.get('/professores', (req, res) => {
-    res.json(bd.get());
+    res.json(bd.getProfessores());
+});
+
+app.get('/professores/:id', (req, res) => {
+    const idAluno = req.param.id;
+    res.json(bd.getProfessores());
 });
 
 app.post('/professores', (req, res) => {
-    bd.add(req.body);
+    bd.addProfessores(req.body);
     res.send('Professor adicionado com sucesso!');
 });
 
